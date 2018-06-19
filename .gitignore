@@ -1,0 +1,21 @@
+*.class
+
+*.jar
+.classpath
+.settings
+.prefs
+.project
+.checkstyle
+*.log
+
+target/
+
+release.properties
+
+third_party_licenses/
+
+# IntelliJ Idea
+.idea/
+*.iws
+*.iml
+*.ipr
