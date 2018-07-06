@@ -301,6 +301,11 @@ public class FunctionalTest {
     }
 
     @Test(expected = RuntimeException.class)
+    public void usingBiConsumerExceptionalWrapperShouldRecardException() {
+        Functional.exceptionalBiC((x, y) -> new File("/notarealpathhere/foo.txt").createNewFile()).accept("nothing", "nothing");
+    }
+
+    @Test(expected = RuntimeException.class)
     public void usingSupplierExceptionalWrapperShouldRecastException() {
         Functional.exceptionalS(() -> new File("/notarealpathhere/foot.txt").createNewFile()).get();
     }
