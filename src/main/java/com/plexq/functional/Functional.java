@@ -3,6 +3,7 @@ package com.plexq.functional;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
+import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -23,6 +24,10 @@ public final class Functional {
     }
 
     public static <A> Consumer<A> exceptionalC(ExceptionalConsumer<A> f) {
+        return f;
+    }
+
+    public static <A,B> BiConsumer<A,B> exceptionalBiC(ExceptionalBiConsumer<A,B> f) {
         return f;
     }
 
